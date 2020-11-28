@@ -92,7 +92,6 @@ class TinyServer {
 
   start () {
     const server = http.createServer(this.handle.bind(this))
-    console.log(process.cwd(), this.directory)
     server.listen(this.port, () => {
       console.log(
         `${chalk.yellow('Starting up tiny-server: ')} ./${path.relative(
